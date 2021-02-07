@@ -63,11 +63,11 @@
                 obstaclesGroup=new Group();
                 coiinGroup=new Group();
 
-                ground=createSprite(width/2,height/2+400,1100,60);
+                ground=createSprite(width/2,height/2+380,1100,60);
                 ground.addImage(gr)
             
                 ground.scale=2.1
-                character=createSprite(width/2-400,height/2+116,30,120);
+                character=createSprite(width/2-400,height/2+96,30,120);
             // character.shapeColor='pink'
               character.addAnimation('character_walking',chare)
              character.addAnimation('stop',characterr)
@@ -76,7 +76,7 @@
                 ground.visible=false;
                 iground.visible=false;
                 character.visible=false;
-                if(keyDown('space')&&character.y>470){
+                if(keyDown('space')&&character.y>450){
                 //  character.velocityY=-11.5
                     character.changeAnimation('stop',characterr)}
  b=createSprite(width/2,height/2);
@@ -87,13 +87,13 @@
                 n.shapeColor='lightgreen'
                 n.visible=false;
 
-                       tree=createSprite(width+10,height/2+50);
+                       tree=createSprite(width+10,height/2+30);
                 tree.addImage(treeh);
                 tree.scale=2
                 tree.setCollider("rectangle",0,0,120,220);
                 tree.visible=false
 
-jump=createSprite(width/2+400,height/2+200)
+jump=createSprite(width/2+400,height/2+180)
              jump.addImage(jum)
              jump.scale=0.2
                jump.visible=false
@@ -156,12 +156,12 @@ if(score===479){
                     iground.visible=true;
                     character.visible=true
                     ;
-            if(keyDown('space')&&character.y>470){
+            if(keyDown('space')&&character.y>450){
             character.velocityY=-11.5
             //character.changeAnimation('stop',characterr)
             }
 
-            if(mousePressedOver(jump)&&character.y>470){
+            if(mousePressedOver(jump)&&character.y>450){
                character.velocityY=-11.5
           }
 
@@ -291,7 +291,7 @@ tree.visible=false;
 
             function obstaclest() {
                 if(frameCount%60===0){
-            obstacles=createSprite(width/2+600,height/2+160,20,110);
+            obstacles=createSprite(width/2+600,height/2+140,20,110);
             obstacles.velocityX= -(13 +5* score/100);
 
         
